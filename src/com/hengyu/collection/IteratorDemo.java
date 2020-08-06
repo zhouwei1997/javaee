@@ -1,7 +1,6 @@
 package com.hengyu.collection;
 
 import org.junit.Test;
-import org.omg.CORBA.ORBPackage.InconsistentTypeCode;
 
 import java.util.ArrayList;
 import java.util.Collection;
