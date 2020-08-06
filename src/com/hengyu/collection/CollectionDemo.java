@@ -12,6 +12,7 @@ import java.util.Collection;
  */
 public class CollectionDemo {
 
+    //创建集合对象
     private Collection<String> collection = new ArrayList<>();
 
     /**
@@ -45,6 +46,10 @@ public class CollectionDemo {
         System.out.println(collection.size());
     }
 
+    /**
+     * 公共类方法
+     * 创始元素集合
+     */
     private void publicMethod() {
         collection.add("张三丰");
         collection.add("李易峰");
