@@ -12,7 +12,6 @@ import java.util.Collections;
  * project name: javase
  * Version:
  * Description:
- * <p>
  * 斗地主综合案例
  * 1、准备牌
  * 2、洗牌
