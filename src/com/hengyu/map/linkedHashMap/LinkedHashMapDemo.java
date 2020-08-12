@@ -2,7 +2,6 @@ package com.hengyu.map.linkedHashMap;
 
 import org.junit.Test;
 
-import javax.print.DocFlavor;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 
