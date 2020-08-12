@@ -51,7 +51,7 @@ public Set<Map.Entry<K,V>> entrySet();获取到Map集合中所有的键值对对
 java.util.HashMap<K,V> implement Map<K,V>
 
 ## 特点
-1、HashMap集合底层是哈希表：查询的速度特别快
+1、HashMap集合底层是哈希表：查询的速度特别快，线程不安全的集合
 ~~~
 JDK1.8之前：数组+单向链表
 JDK1.8之后：数组+单向链表/红黑树(链表长度超过8)
@@ -66,3 +66,9 @@ java.util.LinkedHashMap<K,V> extends HashMap<K,V>
 1、LinkedHashMap集合底层是哈希表+链表
 
 2、LinkedHashMap集合是一个有序的集合，存储元素和取出元素的顺序是一致的
+
+# Hashtable
+
+java.util.Hashtable<K,V> implements Map<K,V>
+
+Hashtable底层也是一个哈希表，是一个线程安全的集合，是单线程集合，速度慢
