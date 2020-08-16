@@ -21,3 +21,4 @@ public void run()：此线程要执行的任务在此处定义代码
 public static void sleep(long millis)：使当前正在执行的线程对象被引用
 
 public static Thread currentThread()：返回当前正在执行线程对象的引用
+
