@@ -1,4 +1,4 @@
-package com.hengyu.thread;
+package com.hengyu.exception;
 
 import java.util.Scanner;
 
