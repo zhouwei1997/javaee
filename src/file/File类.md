@@ -90,3 +90,10 @@ public boolean delete()：删除此File表示的文件或目录
 public boolean mkdir()：创建由此File表示的目录
 
 public boolean mkdirs()：创建由此File表示的目录，包括任何必须但不存在的父目录
+
+
+## 目录的遍历
+
+public String[] list()：返回一个String数组，表示该File目录中的所有子文件或目录
+
+public File[] listFiles()：返回一个File数组，表示该File目录中的所有的子文件或目录
