@@ -94,22 +94,47 @@ public class FOSWrite {
         fos.close();
     }
 }
-``` 
+```
 
 #### 数据追加续写
 
 - public FileOutputStream(File file,boolean append)：创建文件输出流以写入由指定的File对象表示的文件
 - public FileOutputStream(String name,boolean append)：创建文件输出流以指定的名称写入文件
 
+这两个构造方法，参数中都需要传入一个`boolean`类型的值，`true`表示追加数据，`false`表示清空原有数据。这样创建的输出流对象，就可以指定是否追加续写了
 
+~~~java
+public class FOSWrite {
 
-#### 写出换行
+    public static void main(String[] args) throws IOException {
+        //使用文件名称创建流对象
+        FileOutputStream fos = new FileOutputStream("fos.txt", true);
+        for (int i = 0; i < 10; i++) {
+            fos.write("abcde".getBytes());
+        }
+        //关闭资源
+        fos.close();
+    }
+}
+~~~
 
 ### 字节输入流【InputStream】
 
+java.io.InputStream抽象类时表示字节输入流的所有类的超类，可以读取字节信息到内存中。它定义了字节输入流的基本共性功能方法
+- public void close()：关闭此输入流并释放此流相关联的任何系统资源
+- public abstract int read()：从输入流读取数据的下一个字节
+- public int read(byte[] bytes)：从输入流读取一些字节数，并将它们存储到字节数组bytes中
+
+close方法，当完成流的操作时，必须调用次方法，释放系统资源
+
 ### FileInputStream类
 
+java.io.FileInputStream类是文件输入流，从文件中读取字节
+
 #### 构造方法
+
+- FileInputStream(File file)：通过打开与实际文件的连接来创建一个FileInputStream，该文件由文件系统中的File对象file命名
+- FileInputStream(String name)：通过打开与实际文件的连接来创建一个FileInputStream，该文件由文件系统中的路径名name命名
 
 #### 读取字节数据
 
