@@ -1,46 +1,46 @@
-# µÚÎåÕÂ ÊôĞÔ¼¯
+# å±æ€§é›†
 
-## 5.1 ¸ÅÊö
+## æ¦‚è¿°
 
-`java.util.Properties ` ¼Ì³ĞÓÚ` Hashtable` £¬À´±íÊ¾Ò»¸ö³Ö¾ÃµÄÊôĞÔ¼¯¡£ËüÊ¹ÓÃ¼üÖµ½á¹¹´æ´¢Êı¾İ£¬Ã¿¸ö¼ü¼°Æä¶ÔÓ¦Öµ¶¼ÊÇÒ»¸ö×Ö·û´®¡£¸ÃÀàÒ²±»Ğí¶àJavaÀàÊ¹ÓÃ£¬±ÈÈç»ñÈ¡ÏµÍ³ÊôĞÔÊ±£¬`System.getProperties` ·½·¨¾ÍÊÇ·µ»ØÒ»¸ö`Properties`¶ÔÏó¡£
+`java.util.Properties ` ç»§æ‰¿äº` Hashtable` ï¼Œæ¥è¡¨ç¤ºä¸€ä¸ªæŒä¹…çš„å±æ€§é›†ã€‚å®ƒä½¿ç”¨é”®å€¼ç»“æ„å­˜å‚¨æ•°æ®ï¼Œæ¯ä¸ªé”®åŠå…¶å¯¹åº”å€¼éƒ½æ˜¯ä¸€ä¸ªå­—ç¬¦ä¸²ã€‚è¯¥ç±»ä¹Ÿè¢«è®¸å¤šJavaç±»ä½¿ç”¨ï¼Œæ¯”å¦‚è·å–ç³»ç»Ÿå±æ€§æ—¶ï¼Œ`System.getProperties` æ–¹æ³•å°±æ˜¯è¿”å›ä¸€ä¸ª`Properties`å¯¹è±¡ã€‚
 
-## 5.2 PropertiesÀà
+## Propertiesç±»
 
-### ¹¹Ôì·½·¨
+### æ„é€ æ–¹æ³•
 
-- `public Properties()` :´´½¨Ò»¸ö¿ÕµÄÊôĞÔÁĞ±í¡£
+- `public Properties()` :åˆ›å»ºä¸€ä¸ªç©ºçš„å±æ€§åˆ—è¡¨ã€‚
 
-### »ù±¾µÄ´æ´¢·½·¨
+### åŸºæœ¬çš„å­˜å‚¨æ–¹æ³•
 
-- `public Object setProperty(String key, String value)` £º ±£´æÒ»¶ÔÊôĞÔ¡£  
-- `public String getProperty(String key) ` £ºÊ¹ÓÃ´ËÊôĞÔÁĞ±íÖĞÖ¸¶¨µÄ¼üËÑË÷ÊôĞÔÖµ¡£
-- `public Set<String> stringPropertyNames() ` £ºËùÓĞ¼üµÄÃû³ÆµÄ¼¯ºÏ¡£
+- `public Object setProperty(String key, String value)` ï¼š ä¿å­˜ä¸€å¯¹å±æ€§ã€‚  
+- `public String getProperty(String key) ` ï¼šä½¿ç”¨æ­¤å±æ€§åˆ—è¡¨ä¸­æŒ‡å®šçš„é”®æœç´¢å±æ€§å€¼ã€‚
+- `public Set<String> stringPropertyNames() ` ï¼šæ‰€æœ‰é”®çš„åç§°çš„é›†åˆã€‚
 
 ```java
 public class ProDemo {
     public static void main(String[] args) throws FileNotFoundException {
-        // ´´½¨ÊôĞÔ¼¯¶ÔÏó
+        // åˆ›å»ºå±æ€§é›†å¯¹è±¡
         Properties properties = new Properties();
-        // Ìí¼Ó¼üÖµ¶ÔÔªËØ
+        // æ·»åŠ é”®å€¼å¯¹å…ƒç´ 
         properties.setProperty("filename", "a.txt");
         properties.setProperty("length", "209385038");
         properties.setProperty("location", "D:\\a.txt");
-        // ´òÓ¡ÊôĞÔ¼¯¶ÔÏó
+        // æ‰“å°å±æ€§é›†å¯¹è±¡
         System.out.println(properties);
-        // Í¨¹ı¼ü,»ñÈ¡ÊôĞÔÖµ
+        // é€šè¿‡é”®,è·å–å±æ€§å€¼
         System.out.println(properties.getProperty("filename"));
         System.out.println(properties.getProperty("length"));
         System.out.println(properties.getProperty("location"));
 
-        // ±éÀúÊôĞÔ¼¯,»ñÈ¡ËùÓĞ¼üµÄ¼¯ºÏ
+        // éå†å±æ€§é›†,è·å–æ‰€æœ‰é”®çš„é›†åˆ
         Set<String> strings = properties.stringPropertyNames();
-        // ´òÓ¡¼üÖµ¶Ô
+        // æ‰“å°é”®å€¼å¯¹
         for (String key : strings ) {
           	System.out.println(key+" -- "+properties.getProperty(key));
         }
     }
 }
-Êä³ö½á¹û£º
+è¾“å‡ºç»“æœï¼š
 {filename=a.txt, length=209385038, location=D:\a.txt}
 a.txt
 209385038
@@ -50,11 +50,11 @@ length -- 209385038
 location -- D:\a.txt
 ```
 
-### ÓëÁ÷Ïà¹ØµÄ·½·¨
+### ä¸æµç›¸å…³çš„æ–¹æ³•
 
-- `public void load(InputStream inStream)`£º ´Ó×Ö½ÚÊäÈëÁ÷ÖĞ¶ÁÈ¡¼üÖµ¶Ô¡£ 
+- `public void load(InputStream inStream)`ï¼š ä»å­—èŠ‚è¾“å…¥æµä¸­è¯»å–é”®å€¼å¯¹ã€‚ 
 
-²ÎÊıÖĞÊ¹ÓÃÁË×Ö½ÚÊäÈëÁ÷£¬Í¨¹ıÁ÷¶ÔÏó£¬¿ÉÒÔ¹ØÁªµ½Ä³ÎÄ¼şÉÏ£¬ÕâÑù¾ÍÄÜ¹»¼ÓÔØÎÄ±¾ÖĞµÄÊı¾İÁË¡£ÎÄ±¾Êı¾İ¸ñÊ½:
+å‚æ•°ä¸­ä½¿ç”¨äº†å­—èŠ‚è¾“å…¥æµï¼Œé€šè¿‡æµå¯¹è±¡ï¼Œå¯ä»¥å…³è”åˆ°æŸæ–‡ä»¶ä¸Šï¼Œè¿™æ ·å°±èƒ½å¤ŸåŠ è½½æ–‡æœ¬ä¸­çš„æ•°æ®äº†ã€‚æ–‡æœ¬æ•°æ®æ ¼å¼:
 
 ```
 filename=a.txt
@@ -62,16 +62,16 @@ length=209385038
 location=D:\a.txt
 ```
 
-¼ÓÔØ´úÂëÑİÊ¾£º
+åŠ è½½ä»£ç æ¼”ç¤ºï¼š
 
 ```java
 public class ProDemo2 {
     public static void main(String[] args) throws FileNotFoundException {
-        // ´´½¨ÊôĞÔ¼¯¶ÔÏó
+        // åˆ›å»ºå±æ€§é›†å¯¹è±¡
         Properties pro = new Properties();
-        // ¼ÓÔØÎÄ±¾ÖĞĞÅÏ¢µ½ÊôĞÔ¼¯
+        // åŠ è½½æ–‡æœ¬ä¸­ä¿¡æ¯åˆ°å±æ€§é›†
         pro.load(new FileInputStream("read.txt"));
-        // ±éÀú¼¯ºÏ²¢´òÓ¡
+        // éå†é›†åˆå¹¶æ‰“å°
         Set<String> strings = pro.stringPropertyNames();
         for (String key : strings ) {
           	System.out.println(key+" -- "+pro.getProperty(key));
@@ -80,4 +80,4 @@ public class ProDemo2 {
 }
 ```
 
-> Ğ¡ÌùÊ¿£ºÎÄ±¾ÖĞµÄÊı¾İ£¬±ØĞëÊÇ¼üÖµ¶ÔĞÎÊ½£¬¿ÉÒÔÊ¹ÓÃ¿Õ¸ñ¡¢µÈºÅ¡¢Ã°ºÅµÈ·ûºÅ·Ö¸ô¡£
+> å°è´´å£«ï¼šæ–‡æœ¬ä¸­çš„æ•°æ®ï¼Œå¿…é¡»æ˜¯é”®å€¼å¯¹å½¢å¼ï¼Œå¯ä»¥ä½¿ç”¨ç©ºæ ¼ã€ç­‰å·ã€å†’å·ç­‰ç¬¦å·åˆ†éš”ã€‚
