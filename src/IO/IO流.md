@@ -138,6 +138,31 @@ java.io.FileInputStream类是文件输入流，从文件中读取字节
 
 #### 读取字节数据
 
+~~~java
+import java.io.FileInputStream;public class FISRead{
+    public static void main(String[] args){
+      //使用文件名创建流对象
+      FileInputStream fis=new FileInputStream("read.txt");
+      //读取数据，返回一个字节
+      int read = fis.read();
+      System.out.println((char)read);
+      read=fis.read();
+      System.out.println((char)read);
+      read=fis.read();
+      System.out.println((char)read);
+      read=fis.read();
+      System.out.println((char)read);
+      read=fis.read();
+      System.out.println((char)read);
+      //读取到末尾，返回-1
+      	read = fis.read();
+        System.out.println( read);
+		// 关闭资源
+        fis.close();
+    }
+}
+~~~
+
 
 
 
